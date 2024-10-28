@@ -32,26 +32,6 @@ export const blogsData = [
     tags: ["hydration", "health tips", "seasonal health"],
     image: "/images/blog3.jpg",
   },
-  //   {
-  //     title: "Winter Wellness: Preventing Cold and Flu Naturally",
-  //     author: "medico101",
-  //     date: "18th Jan",
-  //     category: "Seasonal Health",
-  //     description:
-  //       "Natural remedies and practices to prevent common winter illnesses, from nutrition tips to hygiene habits.",
-  //     tags: ["cold and flu", "winter health", "immunity"],
-  //     image: "/images/blog4.jpg",
-  //   },
-  //   {
-  //     title: "Spring Allergy Survival Guide: Tips to Breathe Easy",
-  //     author: "naturecare",
-  //     date: "31st Mar",
-  //     category: "Allergies",
-  //     description:
-  //       "Comprehensive tips on managing spring allergies, including home care and natural treatments for respiratory relief.",
-  //     tags: ["allergies", "respiratory health", "seasonal health"],
-  //     image: "/images/blog5.jpg",
-  //   },
 ];
 
 const Blogs = () => {

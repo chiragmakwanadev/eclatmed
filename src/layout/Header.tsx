@@ -10,9 +10,9 @@ const Header = () => {
 
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
-      setShowHeader(false); // Hide header when scrolling down
+      setShowHeader(false);
     } else {
-      setShowHeader(true); // Show header when scrolling up
+      setShowHeader(true);
     }
     setLastScrollY(window.scrollY);
   };
@@ -25,9 +25,9 @@ const Header = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (!isMenuOpen) {
-      document.body.style.overflow = "hidden"; // Prevent scrolling
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; // Allow scrolling
+      document.body.style.overflow = "auto";
     }
   };
 
