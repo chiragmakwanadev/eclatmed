@@ -5,13 +5,13 @@ import Clamp from "@/pages/clamp";
 const LandingData = [
   {
     id: 1,
-    image: "/images/landing1.jpg",
+    image: "/images/landing1.png",
     header: "Entrust your Health With",
     title: "Eclat Medical Center",
   },
   {
     id: 2,
-    image: "/images/landing2.jpg",
+    image: "/images/landing2.png",
     header: "Eclat Medical Center",
     title: "Your Path To Brilliant Healthcare",
   },
@@ -62,7 +62,7 @@ const Landing = () => {
       <img
         src={LandingData[currentIndex].image}
         alt=""
-        className="w-full object-cover h-[60vh] xl:h-[90vh] transition-all duration-500"
+        className="w-full object-cover h-[60vh] xl:h-[94vh] transition-all duration-500"
       />
       <div className="absolute top-[40%] left-[10%] md:left-[20%] text-white">
         <h4
@@ -92,7 +92,7 @@ const Landing = () => {
             paddingRight: Clamp(1.25, 2.5),
             paddingTop: Clamp(1, 1.25),
             paddingBottom: Clamp(1, 1.25),
-            fontSize: Clamp(0.75, 1.75),
+            fontSize: Clamp(0.75, 1),
           }}
         >
           MAKE AN APPOINTMENT

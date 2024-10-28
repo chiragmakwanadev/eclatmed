@@ -80,18 +80,18 @@ const Service = () => {
         </div>
       </div>
       <div
-        className="py-[50px] flex flex-col xl:flex-row overflow-hidden"
+        className="py-[50px] flex flex-col xl:flex-row"
         style={{
           paddingLeft: Clamp(1.25, 15.62),
           paddingRight: Clamp(1.25, 15.62),
         }}
       >
         <img
-          src="/images/landing1.jpg"
+          src="/images/service-img.png"
           alt=""
-          className="w-full xl:w-[40%] rounded-t-xl xl:rounded-l-xl"
+          className="w-full xl:w-[40%] object-cover"
         />
-        <div className="w-full xl:w-[70%] bg-gray-100 flex flex-col md:flex-row flex-wrap rounded-b-xl xl:rounded-r-xl">
+        <div className="w-full xl:w-[70%] bg-gray-100 flex flex-col md:flex-row flex-wrap">
           {visitData.map((data, index) => (
             <div
               key={index}

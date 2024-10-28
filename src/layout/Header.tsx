@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <>
       <div
-        className={`bg-[#41515d] fixed w-full px-[20px] md:px-[100px] xl:px-[250px] text-white bg-opacity-80 z-[99999] transition-transform duration-500 ${
+        className={`bg-[#112f46] fixed w-full px-[20px] md:px-[100px] xl:px-[250px] text-white bg-opacity-80 z-[99999] transition-transform duration-500 ${
           showHeader ? "translate-y-0" : "-translate-y-full"
         }`}
         style={{
@@ -44,11 +44,15 @@ const Header = () => {
       >
         <div className="flex flex-row items-center justify-between">
           <div className="flex items-center gap-[130px]">
-            <img
-              src="/images/logo.jpg"
-              alt="header logo"
-              className="w-[100px] h-[120px] object-cover"
-            />
+            <Link href="/">
+              <div className="bg-[#031219] w-[100px] h-[120px] flex items-center justify-center">
+                <img
+                  src="/images/logo.png"
+                  alt="header logo"
+                  className="w-[80px] object-cover"
+                />
+              </div>
+            </Link>
             <ul className="hidden gap-7 xl:flex">
               <li className="relative group">
                 <Link href="/" className="relative inline-block">

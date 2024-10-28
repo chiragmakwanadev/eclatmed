@@ -4,15 +4,15 @@ import React from "react";
 const Data = [
   {
     image: "/images/team1.jpg",
-    name: "Dr. Michelle Lester",
+    name: "Dr. Customers",
   },
   {
     image: "/images/team2.jpg",
-    name: "Dr. Dakota Ken",
+    name: "Dr. Dharab Rani",
   },
   {
     image: "/images/team3.jpg",
-    name: "Dr. Mike Ross",
+    name: "Dr. Ali khanna",
   },
 ];
 
