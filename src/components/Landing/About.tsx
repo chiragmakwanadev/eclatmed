@@ -1,3 +1,4 @@
+import Clamp from "@/pages/clamp";
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
@@ -5,15 +6,27 @@ import { IoCall } from "react-icons/io5";
 const About = () => {
   return (
     <div className="flex flex-col items-center justify-center py-[50px]">
-      <h1 className="text-[36px] text-center font-bold py-[50px]">
+      <h1
+        className="text-[36px] text-center font-bold py-[50px] px-[20px]"
+        style={{ fontSize: Clamp(1.5, 2.5) }}
+      >
         Welcome To Eclat Medical Centre
       </h1>
-      <div className="bg-gray-50 py-[50px] px-[80px] flex flex-col rounded-2xl mx-[250px]">
+      <div
+        className="bg-gray-50 py-[20px] xl:py-[50px] px-[20px] md:px-[40px] xl:px-[80px] flex flex-col rounded-2xl"
+        style={{
+          marginLeft: Clamp(1.25, 15.62),
+          marginRight: Clamp(1.25, 15.62),
+        }}
+      >
         <div className="flex flex-col gap-5 pb-10">
-          <h1 className="text-[40px] font-semibold">
+          <h1
+            className="text-[40px] font-semibold"
+            style={{ fontSize: Clamp(1.5, 2.5) }}
+          >
             <span className="text-[#019ae3]">About</span> Us
           </h1>
-          <p className="text-[18px]">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px]">
             At Eclat Medical Center, we are driven by a singular vision: to
             provide outstanding medical care that not only treats but truly
             enriches the lives of our patients. Our center stands as a beacon of
@@ -26,10 +39,13 @@ const About = () => {
           </p>
         </div>
         <div className="flex flex-col gap-5 pb-10">
-          <h1 className="text-[40px] font-semibold">
+          <h1
+            className="text-[40px] font-semibold"
+            style={{ fontSize: Clamp(1.5, 2.5) }}
+          >
             Our <span className="text-[#019ae3]">Mission</span>
           </h1>
-          <p className="text-[18px]">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px]">
             Our mission is simple yet profound—to enhance the well-being of our
             community through dedicated service, innovative practices, and a
             compassionate approach to healthcare. Whether you are seeking
@@ -40,15 +56,18 @@ const About = () => {
           </p>
         </div>
         <div className="flex flex-col gap-5 pb-10">
-          <h1 className="text-[40px] font-semibold">
+          <h1
+            className="text-[40px] font-semibold"
+            style={{ fontSize: Clamp(1.5, 2.5) }}
+          >
             Contact <span className="text-[#019ae3]">Us</span>
           </h1>
-          <div className="text-white flex gap-5">
-            <button className="bg-[#019ae3] px-[20px] py-[8px] rounded-[3px] flex items-center justify-center gap-3">
+          <div className="text-white flex gap-5 text-[12px] md:text-[18px]">
+            <button className="bg-[#019ae3] px-[10px] md:px-[15px] xl:px-[20px] py-[8px] rounded-[3px] flex items-center justify-center gap-3">
               <IoCall />
               Call us +123 456 789
             </button>
-            <button className="bg-[#019ae3] px-[20px] py-[8px] rounded-[3px] flex items-center justify-center gap-3">
+            <button className="bg-[#019ae3] px-[10px] md:px-[15px] xl:px-[20px] py-[8px] rounded-[3px] flex items-center justify-center gap-3">
               <FaCalendarAlt />
               Book Appointment
             </button>

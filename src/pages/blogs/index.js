@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogsData } from "../blogsData";
 import Link from "next/link";
+import Clamp from "../clamp";
 
 const flattenedBlogsData = blogsData[0];
 
@@ -23,7 +24,13 @@ const Index = () => {
   return (
     <div>
       <Breadcrumbs currentPage="Blogs" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-[250px] py-[50px]">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-[50px]"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
         {currentBlogs.map((blog) => (
           <div key={blog.slug} className="bg-white rounded-lg shadow-md p-4">
             <img

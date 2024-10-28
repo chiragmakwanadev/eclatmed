@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { blogsData } from "../../blogsData";
 import Link from "next/link";
+import Clamp from "../../clamp";
 
 const BlogPost = () => {
   const router = useRouter();
@@ -20,11 +21,30 @@ const BlogPost = () => {
         alt={blog.title}
         className="w-full h-[500px] pt-[120px] object-cover"
       />
-      <div className="container mx-auto px-[250px] py-[50px]">
-        <h1 className="text-[40px] font-bold mt-4">{blog.title}</h1>
+      <div
+        className="container mx-auto py-[50px]"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h1 className=" font-bold mt-4" style={{ fontSize: Clamp(1.4, 2.4) }}>
+          {blog.title}
+        </h1>
         <div className="flex items-center gap-2">
-          <h3 className="text-lg font-medium mt-2">By {blog.author}</h3> |
-          <p className="mt-2 text-blue-500">Published on: {blog.date}</p>
+          <h3
+            className="font-medium mt-2"
+            style={{ fontSize: Clamp(0.7, 1.5) }}
+          >
+            By {blog.author}
+          </h3>{" "}
+          |
+          <p
+            className="mt-2 text-blue-500"
+            style={{ fontSize: Clamp(0.7, 1.5) }}
+          >
+            Published on: {blog.date}
+          </p>
         </div>
         {blog.description.map((paragraph, index) => (
           <div key={index} className="flex flex-col gap-5 mt-4">

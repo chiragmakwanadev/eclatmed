@@ -1,3 +1,4 @@
+import Clamp from "@/pages/clamp";
 import React from "react";
 import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { SlPhone } from "react-icons/sl";
@@ -62,27 +63,39 @@ const Service = () => {
         <h4 className="text-center text-gray-400 pb-[50px]">
           Visit our medical centre
         </h4>
-        <div className="px-[250px] flex flex-wrap justify-between gap-8">
+        <div
+          className="flex flex-wrap justify-center xl:justify-between gap-8 items-center"
+          style={{
+            paddingLeft: Clamp(1.25, 15.62),
+            paddingRight: Clamp(1.25, 15.62),
+          }}
+        >
           {imageData.map((data) => (
             <img
               src={data.image}
               alt=""
-              className="w-[23%] h-[270px] object-cover"
+              className="w-[100%] xl:w-[23%] h-[270px] object-cover"
             />
           ))}
         </div>
       </div>
-      <div className="px-[250px] py-[50px] flex overflow-hidden">
+      <div
+        className="py-[50px] flex flex-col xl:flex-row overflow-hidden"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
         <img
           src="/images/landing1.jpg"
           alt=""
-          className="w-[40%] rounded-l-xl"
+          className="w-full xl:w-[40%] rounded-t-xl xl:rounded-l-xl"
         />
-        <div className="w-[70%] bg-gray-100 flex flex-wrap rounded-r-xl">
+        <div className="w-full xl:w-[70%] bg-gray-100 flex flex-col md:flex-row flex-wrap rounded-b-xl xl:rounded-r-xl">
           {visitData.map((data, index) => (
             <div
               key={index}
-              className="p-[30px] w-[48%] flex gap-5 items-start justify-center pt-[60px]"
+              className="p-[30px] w-full md:w-[48%] flex gap-5 items-start justify-center pt-[60px]"
             >
               <span className="text-[36px]">{data.icon}</span>
               <span>

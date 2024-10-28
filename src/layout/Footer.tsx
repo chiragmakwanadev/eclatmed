@@ -1,3 +1,5 @@
+import Clamp from "@/pages/clamp";
+import Link from "next/link";
 import React from "react";
 import { CiClock2 } from "react-icons/ci";
 import { IoHomeOutline } from "react-icons/io5";
@@ -7,7 +9,13 @@ import { TbMessageDots } from "react-icons/tb";
 const Footer = () => {
   return (
     <div className="flex flex-col">
-      <div className="bg-gray-100 flex px-[250px] py-[50px] gap-10">
+      <div
+        className="bg-gray-100 flex flex-col xl:flex-row py-[50px] gap-10"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
         <div className="flex flex-col">
           <h1 className="text-[24px] font-medium">Contact Us</h1>
           <ul className="flex flex-col gap-4 pt-[30px]">
@@ -33,12 +41,22 @@ const Footer = () => {
         </div>
         <div className="flex flex-col pr-[80px]">
           <h1 className="text-[24px] font-medium">Our Services</h1>
-          <ul className="flex flex-col gap-4 pt-[30px]">
-            <li>Family & Walk In</li>
-            <li>Our Pharmacy</li>
-            <li>Our Team</li>
-            <li>Blog</li>
-            <li>Contact Us</li>
+          <ul className="flex flex-col gap-4 pt-[30px] ">
+            <li className="text-black hover:text-blue-500 duration-500">
+              <Link href="/family-walk-in">Family & Walk In</Link>
+            </li>
+            <li className="text-black hover:text-blue-500 duration-500">
+              <Link href="/our-pharmacy">Our Pharmacy</Link>
+            </li>
+            <li className="text-black hover:text-blue-500 duration-500">
+              <Link href="/our-team">Our Team</Link>
+            </li>
+            <li className="text-black hover:text-blue-500 duration-500">
+              <Link href="/blogs">Blog</Link>
+            </li>
+            <li className="text-black hover:text-blue-500 duration-500">
+              <Link href="/contact">Contact Us</Link>
+            </li>
           </ul>
         </div>
         <div className="flex flex-col">
@@ -50,7 +68,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-white bg-[#1e838f] py-[30px]">
+      <div className="text-white bg-[#1e838f] py-[30px] px-4">
         <h1 className="text-center">
           Copyright&copy; 2024 Eclat Medical Centre. All Rights Reserved.
         </h1>

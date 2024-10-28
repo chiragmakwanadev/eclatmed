@@ -1,5 +1,6 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import React from "react";
+import Clamp from "../clamp";
 
 const Data = [
   {
@@ -70,29 +71,39 @@ const Index = () => {
   return (
     <div>
       <Breadcrumbs currentPage="Our Team" />
-      <h1 className="text-[36px] text-[#019AE3] text-center py-[50px] font-medium">
+      <h1
+        className="text-[36px] text-[#019AE3] text-center py-[50px] font-medium px-2"
+        style={{ fontSize: Clamp(1.2, 2) }}
+      >
         Eclat Medical Center Team Member
       </h1>
       {Data.map((doctorData, index) => (
-        <div className="flex flex-col px-[250px] pb-[50px]" key={index}>
-          <div className="flex mt-10">
+        <div
+          className="flex flex-col pb-[50px]"
+          key={index}
+          style={{
+            paddingLeft: Clamp(1.25, 15.62),
+            paddingRight: Clamp(1.25, 15.62),
+          }}
+        >
+          <div className="flex flex-col md:flex-row mt-10">
             {doctorData.doctor.image ? (
               <>
-                <div className="w-[20%]">
+                <div className="w-full md:w-[20%]">
                   <img
                     src={doctorData.doctor.image}
                     alt={doctorData.doctor.name}
                     className="w-full h-[230px] object-cover"
                   />
-                  <h1 className="text-[#019AE3] text-[18px] font-medium text-center mt-2">
+                  <h1 className="text-[#019AE3] text-[14px] md:text-[16px] xl:text-[18px] font-medium text-center mt-2">
                     {doctorData.doctor.name}
                   </h1>
-                  <div className="text-[16px] font-semibold text-center">
+                  <div className="text-[14px] md:text-[16px] font-semibold text-center">
                     {doctorData.doctor.qualifications.join(", ")}
                   </div>
                 </div>
-                <div className="w-[80%] flex flex-col">
-                  <div className="flex-grow text-[16px] mt-4 flex flex-col gap-3">
+                <div className="w-full md:w-[80%] flex flex-col">
+                  <div className="flex-grow text-[14px] md:text-[16px] mt-4 flex flex-col gap-3">
                     {doctorData.doctor.description.paragraphs &&
                       doctorData.doctor.description.paragraphs
                         .slice(0, -2)
@@ -104,13 +115,13 @@ const Index = () => {
               </>
             ) : (
               <div className="w-full">
-                <h1 className="text-[#019AE3] text-[18px] font-medium mt-2">
+                <h1 className="text-[#019AE3] text-[14px] md:text-[16px] xl:text-[18px] font-medium mt-2">
                   {doctorData.doctor.name}
                 </h1>
-                <div className="text-[16px] font-semibold">
+                <div className="text-[14px] md:text-[16px] font-semibold">
                   {doctorData.doctor.qualifications.join(", ")}
                 </div>
-                <div className="flex-grow text-[16px] mt-4 flex flex-col gap-3">
+                <div className="flex-grow text-[14px] md:text-[16px] mt-4 flex flex-col gap-3">
                   {doctorData.doctor.description.paragraphs &&
                     doctorData.doctor.description.paragraphs.map(
                       (paragraph, paragraphIndex) => (
@@ -126,7 +137,10 @@ const Index = () => {
               doctorData.doctor.description.paragraphs
                 .slice(-2)
                 .map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex} className="text-[16px]">
+                  <p
+                    key={paragraphIndex}
+                    className="text-[14px] md:text-[16px]"
+                  >
                     {paragraph}
                   </p>
                 ))}

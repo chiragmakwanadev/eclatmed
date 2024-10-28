@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
+import Clamp from "@/pages/clamp";
 
 const LandingData = [
   {
@@ -61,13 +62,14 @@ const Landing = () => {
       <img
         src={LandingData[currentIndex].image}
         alt=""
-        className="w-full object-cover h-[90vh] transition-all duration-500"
+        className="w-full object-cover h-[60vh] xl:h-[90vh] transition-all duration-500"
       />
-      <div className="absolute top-[40%] left-[300px] text-white">
+      <div className="absolute top-[40%] left-[10%] md:left-[20%] text-white">
         <h4
           className="text-[32px]"
           data-aos="fade-down"
           data-aos-duration="800"
+          style={{ fontSize: Clamp(1, 2) }}
         >
           {LandingData[currentIndex].header}
         </h4>
@@ -75,6 +77,7 @@ const Landing = () => {
           className="text-[56px] font-bold leading-[60px]"
           data-aos="zoom-in"
           data-aos-duration="600"
+          style={{ fontSize: Clamp(1.25, 3.5) }}
         >
           {LandingData[currentIndex].title.split(" ").slice(0, 2).join(" ")}
           <br />
@@ -84,6 +87,13 @@ const Landing = () => {
           className="bg-[#019ae3] px-[40px] py-[20px] rounded-sm font-medium mt-[40px]"
           data-aos="fade-left"
           data-aos-duration="600"
+          style={{
+            paddingLeft: Clamp(1.25, 2.5),
+            paddingRight: Clamp(1.25, 2.5),
+            paddingTop: Clamp(1, 1.25),
+            paddingBottom: Clamp(1, 1.25),
+            fontSize: Clamp(0.75, 1.75),
+          }}
         >
           MAKE AN APPOINTMENT
         </button>

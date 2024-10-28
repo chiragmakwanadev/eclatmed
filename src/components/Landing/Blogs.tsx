@@ -1,3 +1,4 @@
+import Clamp from "@/pages/clamp";
 import React from "react";
 
 export const blogsData = [
@@ -55,13 +56,19 @@ export const blogsData = [
 
 const Blogs = () => {
   return (
-    <div className="px-[250px] py-[80px] bg-gray-100 my-[50px]">
+    <div
+      className="py-[80px] bg-gray-100 my-[50px]"
+      style={{
+        paddingLeft: Clamp(1.25, 15.62),
+        paddingRight: Clamp(1.25, 15.62),
+      }}
+    >
       <h1 className="text-center text-[40px] font-medium">
         <span className="text-[#019ae3]">A</span>dd To{" "}
         <span className="text-[#019ae3]">O</span>ur{" "}
         <span className="text-[#019ae3]">Bl</span>og
       </h1>
-      <div className="flex gap-5 pt-[50px]">
+      <div className="flex flex-col xl:flex-row gap-5 pt-[50px]">
         {blogsData.map((data, index) => (
           <div key={index} className="bg-white p-5 rounded-xl relative">
             <img src={data.image} alt="" className="w-full object-cover " />

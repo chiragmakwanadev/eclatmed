@@ -12,3 +12,8 @@
 .transition-opacity {
   transition: opacity 0.05s ease-in-out; /* Match the timeout duration */
 }
+
+.padding-custom {
+  padding-left: Clamp(1.25, 15.62);
+  padding-right: Clamp(1.25, 15.62);
+}

@@ -1,5 +1,6 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import React from "react";
+import Clamp from "../clamp";
 
 const Data = [
   {
@@ -102,24 +103,45 @@ const Index = () => {
   return (
     <div>
       <Breadcrumbs currentPage="Family & Walk In" />
-      <div className="py-[50px] px-[250px] flex flex-col gap-3">
-        <h1 className="text-[#019AE3] text-[36px] font-medium">
+      <div
+        className="py-[50px] flex flex-col gap-3"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h1
+          className="text-[#019AE3] text-[36px] font-medium"
+          style={{ fontSize: Clamp(1, 2) }}
+        >
           Family & Walk In Clinic
         </h1>
-        <h1 className="text-[30px] font-medium">
+        <h1
+          className="text-[30px] font-medium"
+          style={{ fontSize: Clamp(1, 1.75) }}
+        >
           Eclat Medical Center: Comprehensive Family & Walk-In Clinic Services
         </h1>
-        <p className="bg-gray-200 p-7 rounded-xl text-[18px]">
+        <p className="bg-gray-200 p-7 rounded-xl text-[14px] md:text-[16px] xl:text-[18px]">
           Welcome to the Eclat Medical Center, where we provide comprehensive
           health services for all ages, tailored to meet the needs of your
           entire family and available when you need them most.
         </p>
       </div>
-      <div className="py-[50px] px-[250px] flex flex-col gap-3">
-        <h1 className="text-[#019AE3] text-[36px] font-medium">
+      <div
+        className="py-[50px] flex flex-col gap-3"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h1
+          className="text-[#019AE3] text-[36px] font-medium"
+          style={{ fontSize: Clamp(1.2, 2) }}
+        >
           Our Commitment
         </h1>
-        <p className="text-[18px]">
+        <p className="text-[14px] md:text-[16px] xl:text-[18px]">
           At Eclat Medical Center, we understand the multifaceted nature of
           health. Our commitment is to offer accessible, high-quality healthcare
           that includes preventive, chronic, acute, wellness, and mental health
@@ -127,17 +149,28 @@ const Index = () => {
           needs.
         </p>
       </div>
-      <div className="flex py-[50px] px-[250px] items-center gap-10">
+      <div
+        className="flex flex-col md:flex-row py-[50px] items-center gap-10"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
         <img
           src={Data[0].FamilyPractice.image}
           alt="Family Practice"
-          className="w-[40%] object-cover h-[430px]"
+          className="w-full md:w-[40%] object-cover h-[430px]"
         />
-        <div className="flex flex-col gap-3 w-[60%]">
-          <h1 className="text-[#019AE3] text-[36px] font-medium">
+        <div className="flex flex-col gap-3 w-full md:w-[60%]">
+          <h1
+            className="text-[#019AE3] text-[36px] font-medium"
+            style={{ fontSize: Clamp(1.2, 2) }}
+          >
             {Data[0].FamilyPractice.title}
           </h1>
-          <p className="text-[18px]">{Data[0].FamilyPractice.description}</p>
+          <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+            {Data[0].FamilyPractice.description}
+          </p>
           {Data[0].FamilyPractice.services.map((service, index) => (
             <ul key={index} className="flex list-disc">
               <li className="text-[16px]">
@@ -148,12 +181,23 @@ const Index = () => {
           ))}
         </div>
       </div>
-      <div className="flex py-[50px] px-[250px] items-center gap-10">
-        <div className="flex flex-col gap-3 w-[60%]">
-          <h1 className="text-[#019AE3] text-[36px] font-medium">
+      <div
+        className="flex flex-col md:flex-row py-[50px] items-center gap-10"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <div className="flex flex-col gap-3 w-full md:w-[60%]">
+          <h1
+            className="text-[#019AE3] text-[36px] font-medium"
+            style={{ fontSize: Clamp(1.2, 2) }}
+          >
             {Data[0].WalkInClinic.title}
           </h1>
-          <p className="text-[18px]">{Data[0].WalkInClinic.description}</p>
+          <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+            {Data[0].WalkInClinic.description}
+          </p>
           {Data[0].WalkInClinic.services.map((service, index) => (
             <ul key={index} className="flex list-disc">
               <li className="text-[16px]">
@@ -166,11 +210,20 @@ const Index = () => {
         <img
           src={Data[0].WalkInClinic.image}
           alt="Walk-In Clinic"
-          className="w-[40%] object-cover h-[430px]"
+          className="w-full md:w-[40%] object-cover h-[430px]"
         />
       </div>
-      <div className="py-[50px] px-[250px] flex flex-col gap-3">
-        <h2 className="text-[#019AE3] text-[36px] font-medium">
+      <div
+        className="py-[50px] flex flex-col gap-3"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h2
+          className="text-[#019AE3] text-[36px] font-medium"
+          style={{ fontSize: Clamp(1.2, 2) }}
+        >
           {Data[0].WhyChooseUs.title}
         </h2>
         {Data[0].WhyChooseUs.points.map((point, index) => (
@@ -183,13 +236,17 @@ const Index = () => {
         ))}
         <div className="flex flex-col gap-1">
           <h2 className="text-[20px] font-bold">{Data[0].WhatToBring.title}</h2>
-          <p className="text-[16px]">{Data[0].WhatToBring.details}</p>
+          <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+            {Data[0].WhatToBring.details}
+          </p>
         </div>
         <div className="flex flex-col gap-1">
           <h2 className="text-[20px] font-bold">
             {Data[0].VisitUsToday.title}
           </h2>
-          <p className="text-[16px]">{Data[0].VisitUsToday.details}</p>
+          <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+            {Data[0].VisitUsToday.details}
+          </p>
         </div>
       </div>
     </div>

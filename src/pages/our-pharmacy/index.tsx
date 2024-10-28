@@ -1,5 +1,6 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import React from "react";
+import Clamp from "../clamp";
 
 const Data = [
   {
@@ -79,52 +80,81 @@ const Index = () => {
   return (
     <div>
       <Breadcrumbs currentPage="Our Pharmacy" />
-      <div className="px-[250px] py-[50px] flex flex-col gap-3">
-        <h1 className="text-[#019AE3] text-[36px] font-medium">
+      <div
+        className=" py-[50px] flex flex-col gap-3"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h1
+          className="text-[#019AE3] text-[36px] font-medium"
+          style={{ fontSize: Clamp(1.2, 2) }}
+        >
           {Data[0].Pharmacy.title}
         </h1>
-        <p className="text-[18px]">{Data[0].Pharmacy.description}</p>
-        <h2 className="text-[#019AE3] text-[30px] font-medium">
+        <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+          {Data[0].Pharmacy.description}
+        </p>
+        <h2
+          className="text-[#019AE3] text-[30px] font-medium"
+          style={{ fontSize: Clamp(1, 1.75) }}
+        >
           Our Services Include:
         </h2>
         {Data[0].Pharmacy.services.map((service, index) => (
           <ul key={index} className="flex flex-col gap-1 list-disc">
-            <li className="text-[16px]">
-              <span className="font-bold text-[18px]">{service.name}: </span>
+            <li className="text-[14px] md:text-[16px]">
+              <span className="font-bold text-[16px] xl:text-[18px]">
+                {service.name}:{" "}
+              </span>
               {service.details}
             </li>
           </ul>
         ))}
-        <h2 className="text-[#019AE3] text-[30px] font-medium">
+        <h2
+          className="text-[#019AE3] text-[30px] font-medium"
+          style={{ fontSize: Clamp(1, 1.75) }}
+        >
           Why Choose Eclat Medical Center Pharmacy?
         </h2>
         {Data[0].Pharmacy.whyChooseUs.map((choice, index) => (
           <ul key={index} className="flex flex-col gap-1 list-disc">
-            <li className="text-[16px]">
-              <span className="font-bold text-[18px]">{choice.name}: </span>
+            <li className="text-[14px] md:text-[16px]">
+              <span className="font-bold text-[16px] xl:text-[18px]">
+                {choice.name}:{" "}
+              </span>
               {choice.details}
             </li>
           </ul>
         ))}
-        <h2 className="text-[#019AE3] text-[30px] font-medium">
+        <h2
+          className="text-[#019AE3] text-[30px] font-medium"
+          style={{ fontSize: Clamp(1, 1.75) }}
+        >
           {Data[0].Pharmacy.planningYourVisit.title}
         </h2>
-        <p className="text-[18px]">
+        <p className="text-[14px] md:text-[16px] xl:text-[18px]">
           {Data[0].Pharmacy.planningYourVisit.details}
         </p>
         <ul className="list-disc pl-5">
           {Data[0].Pharmacy.planningYourVisit.requirements.map(
             (item, index) => (
-              <li key={index} className="text-[16px]">
+              <li key={index} className="text-[14px] md:text-[16px]">
                 {item}
               </li>
             )
           )}
         </ul>
-        <h2 className="text-[#019AE3] text-[30px] font-medium">
+        <h2
+          className="text-[#019AE3] text-[30px] font-medium"
+          style={{ fontSize: Clamp(1, 1.75) }}
+        >
           {Data[0].Pharmacy.visitToday.title}
         </h2>
-        <p className="text-[18px]">{Data[0].Pharmacy.visitToday.details}</p>
+        <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+          {Data[0].Pharmacy.visitToday.details}
+        </p>
       </div>
     </div>
   );

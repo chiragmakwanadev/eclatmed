@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { CiLocationOn } from "react-icons/ci";
 import { SlPhone } from "react-icons/sl";
 import { BiWorld } from "react-icons/bi";
+import Clamp from "../clamp";
 
 const Data = [
   {
@@ -62,7 +63,13 @@ const Index = () => {
   return (
     <div>
       <Breadcrumbs currentPage="Contact Us" />
-      <div className="bg-gray-700 py-[50px] px-[70px] text-white flex my-[50px] mx-[250px] justify-between">
+      <div
+        className="bg-gray-700 py-[20px] md:py-[30px] xl:py-[50px] px-[20px] md:px-[40px] xl:px-[70px] text-white flex flex-col md:flex-row gap-10 my-[50px] justify-between"
+        style={{
+          marginLeft: Clamp(1.25, 15.62),
+          marginRight: Clamp(1.25, 15.62),
+        }}
+      >
         <div className="flex items-center gap-4">
           <CiLocationOn size={25} />
           <p dangerouslySetInnerHTML={{ __html: contact.address }} />
@@ -82,7 +89,13 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <div className="px-[250px] pb-[50px] h-[500px]">
+      <div
+        className="pb-[50px] h-[500px]"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.263239376684!2d-78.95147322436799!3d43.932129271205084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d52dfc607f05b9%3A0xdb0733176fbe0679!2s3500%20Brock%20St%20N%20%237%2C%20Whitby%2C%20ON%20L1R%203J4%2C%20Canada!5e0!3m2!1sen!2sin!4v1698519157326!5m2!1sen!2sin"
           width="100%"
@@ -92,7 +105,12 @@ const Index = () => {
           loading="lazy"
         ></iframe>
       </div>
-      <div className="px-[250px]">
+      <div
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
         <h1 className="text-2xl mb-4">Leave a Message</h1>
         <form
           onSubmit={handleSubmit}

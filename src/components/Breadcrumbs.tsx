@@ -14,7 +14,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentPage }) => {
         alt=""
         className="h-[270px] w-full object-cover"
       />
-      <div className="flex absolute items-center top-[60%] text-white left-[46%] gap-2">
+      <div className="flex absolute items-center top-[60%] text-white left-[10%] md:left-[30%] xl:left-[46%] gap-2">
         <Link href="/" className="font-medium text-[18px]">
           Home
         </Link>
