@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { blogsData } from "../../blogsData";
+import { blogsData } from "../../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../../clamp";
 

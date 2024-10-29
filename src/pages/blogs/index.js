@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { blogsData } from "../blogsData";
+import { blogsData } from "../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../clamp";
 

@@ -70,11 +70,12 @@ const Service = () => {
             paddingRight: Clamp(1.25, 15.62),
           }}
         >
-          {imageData.map((data) => (
+          {imageData.map((data, index) => (
             <img
               src={data.image}
               alt=""
               className="w-[100%] xl:w-[23%] h-[270px] object-cover"
+              key={index}
             />
           ))}
         </div>
