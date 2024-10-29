@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { blogsData } from "../../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../../clamp";
+import Head from "next/head";
 
 const BlogPost = () => {
   const router = useRouter();
@@ -16,6 +17,9 @@ const BlogPost = () => {
 
   return (
     <div>
+      <Head>
+        <title>Eclat Medical | {blog.title}</title>
+      </Head>
       <img
         src={blog.image}
         alt={blog.title}

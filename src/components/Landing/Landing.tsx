@@ -61,7 +61,7 @@ const Landing = () => {
     <div className="relative z-10">
       <img
         src={LandingData[currentIndex].image}
-        alt=""
+        alt="eclat-landing"
         className="w-full object-cover h-[60vh] xl:h-[94vh] transition-all duration-500"
       />
       <div className="absolute top-[40%] left-[10%] md:left-[20%] text-white">

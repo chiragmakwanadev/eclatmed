@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogsData } from "../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../clamp";
+import Head from "next/head";
 
 const flattenedBlogsData = blogsData[0];
 
@@ -23,6 +24,9 @@ const Index = () => {
 
   return (
     <div>
+      <Head>
+        <title>Eclat Medical | Our Blogs</title>
+      </Head>
       <Breadcrumbs currentPage="Blogs" />
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-[50px]"

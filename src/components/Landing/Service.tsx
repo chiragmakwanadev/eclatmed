@@ -73,7 +73,7 @@ const Service = () => {
           {imageData.map((data, index) => (
             <img
               src={data.image}
-              alt=""
+              alt="eclat-banner"
               className="w-[100%] xl:w-[23%] h-[270px] object-cover"
               key={index}
             />
@@ -89,7 +89,7 @@ const Service = () => {
       >
         <img
           src="/images/service-img.png"
-          alt=""
+          alt="eclat-banner"
           className="w-full xl:w-[40%] object-cover"
         />
         <div className="w-full xl:w-[70%] bg-gray-100 flex flex-col md:flex-row flex-wrap">

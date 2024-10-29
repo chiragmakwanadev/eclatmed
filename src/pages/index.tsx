@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import Service from "@/components/Landing/Service";
 import Team from "@/components/Landing/Team";
 import Blogs from "@/components/Landing/Blogs";
+import Head from "next/head";
 
 const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -13,6 +14,9 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <div className={`${poppins.className}`}>
+      <Head>
+        <title>Eclat Medical</title>
+      </Head>
       <Landing />
       <About />
       <Service />

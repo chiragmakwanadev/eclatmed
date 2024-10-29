@@ -39,7 +39,7 @@ const Team = () => {
             <h1 className="py-[20px] text-[18px]">{data.name}</h1>
             <img
               src={data.image}
-              alt=""
+              alt="eclat-team"
               className="w-full h-[250px] md:h-[400px] object-cover rounded-xl"
             />
           </div>

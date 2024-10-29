@@ -78,7 +78,7 @@ const About = () => {
         <div className="w-full xl:w-[40%]">
           <img
             src="/images/about.png"
-            alt=""
+            alt="eclat-about"
             className="w-[470px] h-[550px] object-cover"
             style={{ width: Clamp(10, 29.5), height: Clamp(12, 34.4) }}
           />

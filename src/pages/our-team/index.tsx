@@ -1,6 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import React from "react";
 import Clamp from "../clamp";
+import Head from "next/head";
 
 const Data = [
   {
@@ -70,6 +71,9 @@ const Data = [
 const Index = () => {
   return (
     <div>
+      <Head>
+        <title>Eclat Medical | Our Team</title>
+      </Head>
       <Breadcrumbs currentPage="Our Team" />
       <h1
         className="text-[36px] text-[#019AE3] text-center py-[50px] font-medium px-2"

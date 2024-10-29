@@ -1,6 +1,7 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
 import React from "react";
 import Clamp from "../clamp";
+import Head from "next/head";
 
 const Data = [
   {
@@ -79,6 +80,9 @@ const Data = [
 const Index = () => {
   return (
     <div>
+      <Head>
+        <title>Eclat Medical | Our Pharmacy</title>
+      </Head>
       <Breadcrumbs currentPage="Our Pharmacy" />
       <div
         className=" py-[50px] flex flex-col gap-3"

@@ -4,6 +4,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { SlPhone } from "react-icons/sl";
 import { BiWorld } from "react-icons/bi";
 import Clamp from "../clamp";
+import Head from "next/head";
 
 const Data = [
   {
@@ -62,6 +63,9 @@ const Index = () => {
 
   return (
     <div>
+      <Head>
+        <title>Eclat Medical | Contact Us</title>
+      </Head>
       <Breadcrumbs currentPage="Contact Us" />
       <div
         className="bg-gray-700 py-[20px] md:py-[30px] xl:py-[50px] px-[20px] md:px-[40px] xl:px-[70px] text-white flex flex-col md:flex-row gap-10 my-[50px] justify-between"
