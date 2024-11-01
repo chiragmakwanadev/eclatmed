@@ -1,5 +1,6 @@
 import Clamp from "@/pages/clamp";
 import React from "react";
+import Image from "next/image";
 
 const Data = [
   {
@@ -37,10 +38,12 @@ const Team = () => {
             className="w-full md:w-[30%] bg-gray-100 flex flex-col gap-4 justify-end rounded-2xl overflow-hidden p-5"
           >
             <h1 className="py-[20px] text-[18px]">{data.name}</h1>
-            <img
+            <Image
               src={data.image}
               alt="eclat-team"
               className="w-full h-[250px] md:h-[400px] object-cover rounded-xl"
+              width={400}
+              height={400}
             />
           </div>
         ))}

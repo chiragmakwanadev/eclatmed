@@ -11,7 +11,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentPage }) => {
     <div className="relative pt-[120px]">
       <img
         src="/images/breadcrumb.jpg"
-        alt=""
+        alt="eclat-banner"
         className="h-[270px] w-full object-cover"
       />
       <div className="flex absolute items-center top-[60%] text-white left-[10%] md:left-[30%] xl:left-[46%] gap-2">

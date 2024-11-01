@@ -2,6 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import React from "react";
 import Clamp from "../clamp";
 import Head from "next/head";
+import Image from "next/image"; // Import the Image component
 
 const Data = [
   {
@@ -160,10 +161,12 @@ const Index = () => {
           paddingRight: Clamp(1.25, 15.62),
         }}
       >
-        <img
+        <Image
           src={Data[0].FamilyPractice.image}
           alt="Family Practice"
           className="w-full md:w-[40%] object-cover h-[430px]"
+          width={500} // Set appropriate width
+          height={430} // Set appropriate height
         />
         <div className="flex flex-col gap-3 w-full md:w-[60%]">
           <h1
@@ -211,10 +214,12 @@ const Index = () => {
             </ul>
           ))}
         </div>
-        <img
+        <Image
           src={Data[0].WalkInClinic.image}
           alt="Walk-In Clinic"
           className="w-full md:w-[40%] object-cover h-[430px]"
+          width={500} // Set appropriate width
+          height={430} // Set appropriate height
         />
       </div>
       <div
@@ -231,27 +236,47 @@ const Index = () => {
           {Data[0].WhyChooseUs.title}
         </h2>
         {Data[0].WhyChooseUs.points.map((point, index) => (
-          <ul key={index} className="flex flex-col">
+          <ul key={index} className="flex list-disc">
             <li className="text-[16px]">
-              <span className="font-bold text-[18px]">{point.name}: </span>
+              <span className="font-bold text-[16px]">{point.name}: </span>
               {point.details}
             </li>
           </ul>
         ))}
-        <div className="flex flex-col gap-1">
-          <h2 className="text-[20px] font-bold">{Data[0].WhatToBring.title}</h2>
-          <p className="text-[14px] md:text-[16px] xl:text-[18px]">
-            {Data[0].WhatToBring.details}
-          </p>
-        </div>
-        <div className="flex flex-col gap-1">
-          <h2 className="text-[20px] font-bold">
-            {Data[0].VisitUsToday.title}
-          </h2>
-          <p className="text-[14px] md:text-[16px] xl:text-[18px]">
-            {Data[0].VisitUsToday.details}
-          </p>
-        </div>
+      </div>
+      <div
+        className="py-[50px] flex flex-col gap-3"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h2
+          className="text-[#019AE3] text-[36px] font-medium"
+          style={{ fontSize: Clamp(1.2, 2) }}
+        >
+          {Data[0].WhatToBring.title}
+        </h2>
+        <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+          {Data[0].WhatToBring.details}
+        </p>
+      </div>
+      <div
+        className="py-[50px] flex flex-col gap-3"
+        style={{
+          paddingLeft: Clamp(1.25, 15.62),
+          paddingRight: Clamp(1.25, 15.62),
+        }}
+      >
+        <h2
+          className="text-[#019AE3] text-[36px] font-medium"
+          style={{ fontSize: Clamp(1.2, 2) }}
+        >
+          {Data[0].VisitUsToday.title}
+        </h2>
+        <p className="text-[14px] md:text-[16px] xl:text-[18px]">
+          {Data[0].VisitUsToday.details}
+        </p>
       </div>
     </div>
   );

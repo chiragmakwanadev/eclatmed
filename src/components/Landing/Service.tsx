@@ -3,32 +3,17 @@ import React from "react";
 import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { SlPhone } from "react-icons/sl";
 import { TbMessageDots } from "react-icons/tb";
+import Image from "next/image";
 
 const imageData = [
-  {
-    image: "/images/service1.jpg",
-  },
-  {
-    image: "/images/service2.jpg",
-  },
-  {
-    image: "/images/service3.jpg",
-  },
-  {
-    image: "/images/service4.jpg",
-  },
-  {
-    image: "/images/service5.jpg",
-  },
-  {
-    image: "/images/service6.jpg",
-  },
-  {
-    image: "/images/service7.jpg",
-  },
-  {
-    image: "/images/service8.jpg",
-  },
+  { image: "/images/service1.jpg", text: "Service 1" },
+  { image: "/images/service2.jpg", text: "Service 2" },
+  { image: "/images/service3.jpg", text: "Service 3" },
+  { image: "/images/service4.jpg", text: "Service 4" },
+  { image: "/images/service5.jpg", text: "Service 5" },
+  { image: "/images/service6.jpg", text: "Service 6" },
+  { image: "/images/service7.jpg", text: "Service 7" },
+  { image: "/images/service8.jpg", text: "Service 8" },
 ];
 
 const visitData = [
@@ -43,14 +28,8 @@ const visitData = [
     title: "3500 Brock St N, Unit # 7,",
     title2: "Whitby ON L1R 3J4",
   },
-  {
-    icon: <SlPhone />,
-    title: "+1 905 430 7774",
-  },
-  {
-    icon: <TbMessageDots />,
-    title: "info@eclatmedical.ca",
-  },
+  { icon: <SlPhone />, title: "+1 905 430 7774" },
+  { icon: <TbMessageDots />, title: "info@eclatmedical.ca" },
 ];
 
 const Service = () => {
@@ -71,12 +50,23 @@ const Service = () => {
           }}
         >
           {imageData.map((data, index) => (
-            <img
-              src={data.image}
-              alt="eclat-banner"
-              className="w-[100%] xl:w-[23%] h-[270px] object-cover"
+            <div
               key={index}
-            />
+              className="relative group w-[100%] xl:w-[23%] h-[270px] overflow-hidden"
+            >
+              <Image
+                src={data.image}
+                alt="eclat-banner"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={500}
+                height={270}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                <span className="text-white text-lg font-medium">
+                  {data.text}
+                </span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -87,10 +77,12 @@ const Service = () => {
           paddingRight: Clamp(1.25, 15.62),
         }}
       >
-        <img
+        <Image
           src="/images/service-img.png"
           alt="eclat-banner"
           className="w-full xl:w-[40%] object-cover"
+          width={600}
+          height={600}
         />
         <div className="w-full xl:w-[70%] bg-gray-100 flex flex-col md:flex-row flex-wrap">
           {visitData.map((data, index) => (

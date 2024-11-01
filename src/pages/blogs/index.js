@@ -4,6 +4,7 @@ import { blogsData } from "../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../clamp";
 import Head from "next/head";
+import Image from "next/image"; // Importing the Image component from next/image
 
 const flattenedBlogsData = blogsData[0];
 
@@ -37,9 +38,11 @@ const Index = () => {
       >
         {currentBlogs.map((blog) => (
           <div key={blog.slug} className="bg-white rounded-lg shadow-md p-4">
-            <img
+            <Image
               src={blog.image}
               alt={blog.title}
+              width={400} // Specify the width
+              height={160} // Specify the height
               className="w-full h-40 object-cover rounded-md"
             />
             <h2 className="text-xl font-semibold mt-2">{blog.title}</h2>

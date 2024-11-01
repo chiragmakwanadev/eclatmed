@@ -2,6 +2,7 @@ import Clamp from "@/pages/clamp";
 import React from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -63,7 +64,7 @@ const About = () => {
             >
               Contact <span className="text-[#019ae3]">Us</span>
             </h1>
-            <div className="text-white flex gap-5 text-[12px] md:text-[18px]">
+            <div className="text-white flex flex-col sm:flex-row gap-5 text-[12px] md:text-[18px]">
               <button className="bg-[#019ae3] px-[10px] md:px-[15px] xl:px-[20px] py-[8px] rounded-[3px] flex items-center justify-center gap-3">
                 <IoCall />
                 Call us +123 456 789
@@ -75,11 +76,13 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-[40%]">
-          <img
+        <div className="w-full xl:w-[40%] flex justify-center">
+          <Image
             src="/images/about.png"
             alt="eclat-about"
-            className="w-[470px] h-[550px] object-cover"
+            width={470}
+            height={550}
+            className="object-cover"
             style={{ width: Clamp(10, 29.5), height: Clamp(12, 34.4) }}
           />
         </div>

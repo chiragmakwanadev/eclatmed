@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
+import Image from "next/image";
 import Clamp from "@/pages/clamp";
 
 const LandingData = [
@@ -59,11 +60,16 @@ const Landing = () => {
 
   return (
     <div className="relative z-10">
-      <img
-        src={LandingData[currentIndex].image}
-        alt="eclat-landing"
-        className="w-full object-cover h-[60vh] xl:h-[94vh] transition-all duration-500"
-      />
+      <div className="w-full h-[60vh] xl:h-[94vh] relative">
+        <Image
+          src={LandingData[currentIndex].image}
+          alt="Eclat Medical Center"
+          layout="fill"
+          objectFit="cover"
+          className="transition-all duration-500"
+          priority
+        />
+      </div>
       <div className="absolute top-[40%] left-[10%] md:left-[20%] text-white">
         <h4
           className="text-[32px]"

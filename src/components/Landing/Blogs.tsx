@@ -1,5 +1,6 @@
 import Clamp from "@/pages/clamp";
 import React from "react";
+import Image from "next/image";
 
 export const blogsData = [
   {
@@ -51,10 +52,12 @@ const Blogs = () => {
       <div className="flex flex-col xl:flex-row gap-5 pt-[50px]">
         {blogsData.map((data, index) => (
           <div key={index} className="bg-white p-5 rounded-xl relative">
-            <img
+            <Image
               src={data.image}
               alt="eclat-blogs"
-              className="w-full object-cover "
+              className="w-full object-cover"
+              width={500}
+              height={300}
             />
             <h1 className="text-[14px] bg-white p-2 absolute top-[30px] z-[9999]">
               {data.date}

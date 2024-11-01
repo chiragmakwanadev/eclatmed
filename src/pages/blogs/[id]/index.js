@@ -4,6 +4,7 @@ import { blogsData } from "../../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../../clamp";
 import Head from "next/head";
+import Image from "next/image"; // Importing the Image component from next/image
 
 const BlogPost = () => {
   const router = useRouter();
@@ -20,9 +21,11 @@ const BlogPost = () => {
       <Head>
         <title>Eclat Medical | {blog.title}</title>
       </Head>
-      <img
+      <Image
         src={blog.image}
         alt={blog.title}
+        width={1200} // Specify the width
+        height={500} // Specify the height
         className="w-full h-[500px] pt-[120px] object-cover"
       />
       <div
@@ -32,7 +35,7 @@ const BlogPost = () => {
           paddingRight: Clamp(1.25, 15.62),
         }}
       >
-        <h1 className=" font-bold mt-4" style={{ fontSize: Clamp(1.4, 2.4) }}>
+        <h1 className="font-bold mt-4" style={{ fontSize: Clamp(1.4, 2.4) }}>
           {blog.title}
         </h1>
         <div className="flex items-center gap-2">
