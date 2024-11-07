@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=${CPANEL_PUBLIC_PATH:-public_html}
+    - /bin/cp -R out/* $DEPLOYPATH/
