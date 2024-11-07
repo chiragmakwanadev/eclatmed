@@ -92,9 +92,11 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <button className="bg-[#019ae3] px-[20px] py-[8px] rounded-[3px] hidden xl:block">
-            Book Appointment
-          </button>
+          <Link href="https://ocean.cognisantmd.com/intake/patients.html?linkRef=8cdddf08-bb45-4be8-906d-8bc5bb0cd4e2#/online-booking">
+            <button className="bg-[#019ae3] px-[20px] py-[8px] rounded-[3px] hidden xl:block">
+              Book Appointment
+            </button>
+          </Link>
           <button
             onClick={toggleMenu}
             className="flex flex-col gap-1 xl:hidden"

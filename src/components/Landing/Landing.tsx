@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import Image from "next/image";
 import Clamp from "@/pages/clamp";
+import Link from "next/link";
 
 const LandingData = [
   {
@@ -89,20 +90,22 @@ const Landing = () => {
           <br />
           {LandingData[currentIndex].title.split(" ").slice(2).join(" ")}
         </h1>
-        <button
-          className="bg-[#019ae3] px-[40px] py-[20px] rounded-sm font-medium mt-[40px]"
-          data-aos="fade-left"
-          data-aos-duration="600"
-          style={{
-            paddingLeft: Clamp(1.25, 2.5),
-            paddingRight: Clamp(1.25, 2.5),
-            paddingTop: Clamp(1, 1.25),
-            paddingBottom: Clamp(1, 1.25),
-            fontSize: Clamp(0.75, 1),
-          }}
-        >
-          MAKE AN APPOINTMENT
-        </button>
+        <Link href="https://ocean.cognisantmd.com/intake/patients.html?linkRef=8cdddf08-bb45-4be8-906d-8bc5bb0cd4e2#/online-booking">
+          <button
+            className="bg-[#019ae3] px-[40px] py-[20px] rounded-sm font-medium mt-[40px]"
+            data-aos="fade-left"
+            data-aos-duration="600"
+            style={{
+              paddingLeft: Clamp(1.25, 2.5),
+              paddingRight: Clamp(1.25, 2.5),
+              paddingTop: Clamp(1, 1.25),
+              paddingBottom: Clamp(1, 1.25),
+              fontSize: Clamp(0.75, 1),
+            }}
+          >
+            MAKE AN APPOINTMENT
+          </button>
+        </Link>
       </div>
       <div className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 flex space-x-2">
         {LandingData.map((_, index) => (
