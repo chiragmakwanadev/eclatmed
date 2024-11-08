@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=${CPANEL_PUBLIC_PATH:-public_html}
+    - export DEPLOYPATH=/home3/lrevhlmy/public_html/eclatmed
     - /bin/cp -R out/* $DEPLOYPATH/
