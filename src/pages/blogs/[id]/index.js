@@ -1,17 +1,36 @@
+// pages/blogs/[id].js
 import React from "react";
-import { useRouter } from "next/router";
 import { blogsData } from "../../../data/blogsData";
 import Link from "next/link";
 import Clamp from "../../clamp";
 import Head from "next/head";
-import Image from "next/image"; // Importing the Image component from next/image
+import Image from "next/image";
 
-const BlogPost = () => {
-  const router = useRouter();
-  const { id } = router.query;
+export async function getStaticPaths() {
+  const paths = blogsData[0].map((blog) => ({
+    params: { id: blog.slug },
+  }));
 
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const { id } = params;
   const blog = blogsData[0].find((item) => item.slug === id);
 
+  if (!blog) {
+    return { notFound: true };
+  }
+
+  return {
+    props: { blog },
+  };
+}
+
+const BlogPost = ({ blog }) => {
   if (!blog) {
     return <div>Blog not found.</div>;
   }
@@ -24,8 +43,8 @@ const BlogPost = () => {
       <Image
         src={blog.image}
         alt={blog.title}
-        width={1200} // Specify the width
-        height={500} // Specify the height
+        width={1200}
+        height={500}
         className="w-full h-[500px] pt-[120px] object-cover"
       />
       <div
